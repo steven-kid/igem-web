@@ -10139,7 +10139,7 @@ h2.title-modern > span {
 
 .team-classic-figure img {
   width: 100%;
-  filter: grayscale(100%);
+  /* filter: grayscale(100%); */
   transition: all 0.3s ease;
 }
 
@@ -10180,7 +10180,7 @@ h2.title-modern > span {
 }
 
 .team-classic-name a:hover {
-  color: #a3b8ff;
+  /* color: #a3b8ff; */
 }
 
 .team-classic-status {
@@ -11804,7 +11804,7 @@ html [class*="section-"].section-top-0 {
 .context-dark .footer-social-list-2 a:hover,
 .bg-gray-dark .footer-social-list-2 a:hover,
 .bg-primary .footer-social-list-2 a:hover {
-  color: #a3b8ff;
+  /* color: #a3b8ff; */
 }
 
 .footer-minimal.context-dark .footer-minimal-bottom-panel,
@@ -15124,7 +15124,7 @@ html.rd-navbar-fixed-linked .page-header {
 
 @media (min-width: 1400px) {
   .rd-navbar-classic.rd-navbar-static .rd-navbar-brand img {
-    max-width: 230px;
+    max-width: 350px;
     max-height: 230px;
   }
 }
@@ -15404,7 +15404,7 @@ html.rd-navbar-fixed-linked .page-header {
 
 @media (min-width: 992px) {
   .rd-navbar-classic-project-content {
-    height: calc(100vh - 205px);
+    height: calc(100vh - 215px);
   }
 }
 
