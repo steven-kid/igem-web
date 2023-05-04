@@ -1450,3 +1450,92 @@
 
 	} );
 }());
+
+
+const gallary = document.querySelector('.gallary')
+const slides = document.querySelectorAll('.slide')
+const leftBtn = document.getElementById('left')
+const rightBtn = document.getElementById('right')
+
+let activeSlide = 0
+
+rightBtn.addEventListener('click', () => {
+  activeSlide++
+
+  if (activeSlide > slides.length - 1) {
+    activeSlide = 0
+  }
+
+  setBgToBody()
+  setActiveSlide()
+})
+
+leftBtn.addEventListener('click', () => {
+  activeSlide--
+
+  if (activeSlide < 0) {
+    activeSlide = slides.length - 1
+  }
+
+  setBgToBody()
+  setActiveSlide()
+})
+
+setBgToBody()
+
+function setBgToBody() {
+  gallary.style.backgroundImage = slides[activeSlide].style.backgroundImage
+}
+
+function setActiveSlide() {
+  slides.forEach((slide) => slide.classList.remove('active'))
+  slides[activeSlide].classList.add('active')
+}
+
+
+function timeline() {
+  var selectors = {
+    id: document.querySelector("#shell"),
+    item: document.querySelectorAll("#shell .timeline-item"),
+    activeClass: "timeline-item--active",
+    img: ".timeline-img"
+  };
+  selectors.item[0].classList.add(selectors.activeClass);
+  selectors.id.style.backgroundImage =
+    "url(" +
+    selectors.item[0].querySelector(selectors.img).getAttribute("src") +
+    ")";
+  var itemLength = selectors.item.length;
+  window.addEventListener("scroll", function () {
+    var max, min;
+    var pos = window.scrollY;
+    selectors.item.forEach(function (item, i) {
+      min = item.offsetTop;
+      max = item.offsetHeight + item.offsetTop;
+      if (i == itemLength - 2 && pos > min + item.offsetHeight / 2) {
+        selectors.item.forEach(function (item) {
+          item.classList.remove(selectors.activeClass);
+        });
+        selectors.id.style.backgroundImage =
+          "url(" +
+          selectors.item[itemLength - 1]
+            .querySelector(selectors.img)
+            .getAttribute("src") +
+          ")";
+          console.log(selectors.item[itemLength - 1]);
+        selectors.item[itemLength - 1].classList.add(selectors.activeClass);
+      } else if (pos <= max - 10 && pos >= min) {
+        selectors.id.style.backgroundImage =
+          "url(" +
+          item.querySelector(selectors.img).getAttribute("src") +
+          ")";
+        selectors.item.forEach(function (item) {
+          item.classList.remove(selectors.activeClass);
+        });
+        selectors.item[i].classList.add(selectors.activeClass);
+      }
+    });
+  });
+}
+
+timeline();
