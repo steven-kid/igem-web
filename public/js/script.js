@@ -1506,36 +1506,36 @@ function timeline() {
     selectors.item[0].querySelector(selectors.img).getAttribute("src") +
     ")";
   var itemLength = selectors.item.length;
-  window.addEventListener("scroll", function () {
-    var max, min;
-    var pos = window.scrollY;
-    selectors.item.forEach(function (item, i) {
-      min = item.offsetTop;
-      max = item.offsetHeight + item.offsetTop;
-      if (i == itemLength - 2 && pos > min + item.offsetHeight / 2) {
-        selectors.item.forEach(function (item) {
-          item.classList.remove(selectors.activeClass);
-        });
-        selectors.id.style.backgroundImage =
-          "url(" +
-          selectors.item[itemLength - 1]
-            .querySelector(selectors.img)
-            .getAttribute("src") +
-          ")";
-          console.log(selectors.item[itemLength - 1]);
-        selectors.item[itemLength - 1].classList.add(selectors.activeClass);
-      } else if (pos <= max - 10 && pos >= min) {
-        selectors.id.style.backgroundImage =
-          "url(" +
-          item.querySelector(selectors.img).getAttribute("src") +
-          ")";
-        selectors.item.forEach(function (item) {
-          item.classList.remove(selectors.activeClass);
-        });
-        selectors.item[i].classList.add(selectors.activeClass);
-      }
-    });
-  });
+  // window.addEventListener("scroll", function () {
+  //   var max, min;
+  //   var pos = window.scrollY;
+  //   selectors.item.forEach(function (item, i) {
+  //     min = item.offsetTop;
+  //     max = item.offsetHeight + item.offsetTop;
+  //     if (i == itemLength - 2 && pos > min + item.offsetHeight / 2) {
+  //       selectors.item.forEach(function (item) {
+  //         item.classList.remove(selectors.activeClass);
+  //       });
+  //       selectors.id.style.backgroundImage =
+  //         "url(" +
+  //         selectors.item[itemLength - 1]
+  //           .querySelector(selectors.img)
+  //           .getAttribute("src") +
+  //         ")";
+  //         console.log(selectors.item[itemLength - 1]);
+  //       selectors.item[itemLength - 1].classList.add(selectors.activeClass);
+  //     } else if (pos <= max - 10 && pos >= min) {
+  //       selectors.id.style.backgroundImage =
+  //         "url(" +
+  //         item.querySelector(selectors.img).getAttribute("src") +
+  //         ")";
+  //       selectors.item.forEach(function (item) {
+  //         item.classList.remove(selectors.activeClass);
+  //       });
+  //       selectors.item[i].classList.add(selectors.activeClass);
+  //     }
+  //   });
+  // });
 }
 
 timeline();
