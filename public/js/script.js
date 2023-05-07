@@ -1500,12 +1500,10 @@ function timeline() {
     activeClass: "timeline-item--active",
     img: ".timeline-img"
   };
-  selectors.item[0].classList.add(selectors.activeClass);
-  selectors.id.style.backgroundImage =
-    "url(" +
-    selectors.item[0].querySelector(selectors.img).getAttribute("src") +
-    ")";
-  var itemLength = selectors.item.length;
+  for (let i = 0; i < 7; i ++){
+    selectors.item[i].classList.add(selectors.activeClass);
+    selectors.id.style.backgroundImage = "url(" + selectors.item[i].querySelector(selectors.img).getAttribute("src") + ")";
+  }
   // window.addEventListener("scroll", function () {
   //   var max, min;
   //   var pos = window.scrollY;
