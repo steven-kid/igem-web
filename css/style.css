@@ -101,7 +101,7 @@ html p a:hover {
 body {
   font-family: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     "Helvetica Neue", Arial, sans-serif;
-  font-size: 14px;
+  font-size: 17px;
   line-height: 1.71429;
   font-weight: 500;
   letter-spacing: 0.05em;
@@ -9362,7 +9362,7 @@ h2.title-modern > span {
   position: relative;
   overflow: hidden;
   text-align: left;
-  max-width: 370px;
+  max-width: 280px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -9764,7 +9764,7 @@ h2.title-modern > span {
 .clients-classic {
   position: relative;
   display: block;
-  max-width: 270px;
+  max-width: 200px;
   margin-left: auto;
   margin-right: auto;
   background: #ffffff;
@@ -20689,3 +20689,8 @@ DEPENDENCES
   .right-arrow {
     right: 85px;
   } 
+
+  .side-space{
+    margin-right: 90px;
+    margin-left: 90px;
+  }
