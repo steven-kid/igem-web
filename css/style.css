@@ -20694,3 +20694,27 @@ DEPENDENCES
     margin-right: 90px;
     margin-left: 90px;
   }
+
+  .block-element{
+    display: block;
+  }
+
+  .para-indent{
+    text-indent: 20px;
+  }
+
+  .clear-left {
+    clear: left;
+  }
+  
+  .clear-right {
+    clear: right;
+  }
+
+  .project-content{
+    display: none; 
+    position: static;
+    flex-direction: column;
+    margin: 20px 10%;
+    transition: 0.5s ease-in;
+  }
