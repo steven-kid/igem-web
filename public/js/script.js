@@ -1500,40 +1500,45 @@ function timeline() {
     activeClass: "timeline-item--active",
     img: ".timeline-img"
   };
-  for (let i = 0; i < 7; i ++){
+  for (let i = 0; i < 1; i ++){
     selectors.item[i].classList.add(selectors.activeClass);
     selectors.id.style.backgroundImage = "url(" + selectors.item[i].querySelector(selectors.img).getAttribute("src") + ")";
   }
-  // window.addEventListener("scroll", function () {
-  //   var max, min;
-  //   var pos = window.scrollY;
-  //   selectors.item.forEach(function (item, i) {
-  //     min = item.offsetTop;
-  //     max = item.offsetHeight + item.offsetTop;
-  //     if (i == itemLength - 2 && pos > min + item.offsetHeight / 2) {
-  //       selectors.item.forEach(function (item) {
-  //         item.classList.remove(selectors.activeClass);
-  //       });
-  //       selectors.id.style.backgroundImage =
-  //         "url(" +
-  //         selectors.item[itemLength - 1]
-  //           .querySelector(selectors.img)
-  //           .getAttribute("src") +
-  //         ")";
-  //         console.log(selectors.item[itemLength - 1]);
-  //       selectors.item[itemLength - 1].classList.add(selectors.activeClass);
-  //     } else if (pos <= max - 10 && pos >= min) {
-  //       selectors.id.style.backgroundImage =
-  //         "url(" +
-  //         item.querySelector(selectors.img).getAttribute("src") +
-  //         ")";
-  //       selectors.item.forEach(function (item) {
-  //         item.classList.remove(selectors.activeClass);
-  //       });
-  //       selectors.item[i].classList.add(selectors.activeClass);
-  //     }
-  //   });
-  // });
+  let currentActive = 0;
+  window.addEventListener("scroll", function () {
+    var max, min;
+    var pos = window.scrollY;
+    selectors.item.forEach(function (item, i) {
+      let itemRect = item.getBoundingClientRect();
+      let itemTop = itemRect.top + window.pageYOffset;
+      min = itemTop;
+      max = itemTop + item.offsetHeight;
+      if (pos <= max && pos >= min - 300) {
+        if(currentActive !== i){
+          selectors.item[currentActive].classList.remove(selectors.activeClass);
+          selectors.id.style.backgroundImage =
+            "url(" +
+            item.querySelector(selectors.img).getAttribute("src") +
+            ")";
+          selectors.item[i].classList.add(selectors.activeClass);
+        }
+        currentActive = i;
+      }
+    });
+  });
 }
 
+function throttle(func, delay) {
+  let timerId;
+  return function (...args) {
+    if (!timerId) {
+      timerId = setTimeout(() => {
+        func.apply(this, args);
+        timerId = null;
+      }, delay);
+    }
+  };
+}
+
+// throttle(timeline(), 500);
 timeline();
