@@ -16196,6 +16196,7 @@ h3 + .isotope-filters {
   background: #ffffff;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.17);
   transform: translate3d(-50%, 0, 0);
+  font-size: 30px; 
   opacity: 0;
   visibility: hidden;
   transition: all 0.3s ease-in-out;
@@ -16273,7 +16274,7 @@ h3 + .isotope-filters {
     content: "";
     top: 0;
     left: -2px;
-    height: 15px;
+    height: 25px;
     width: 1px;
     background: #d7d7d7;
   }
