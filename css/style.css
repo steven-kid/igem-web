@@ -3779,7 +3779,7 @@ hr {
 }
 
 .button.button-icon {
-  display: inline-flex;
+  /* display: inline-flex; */
   justify-content: center;
   align-items: center;
   vertical-align: middle;
@@ -6391,11 +6391,9 @@ textarea.textarea-lg {
 }
 
 .filter-btn{
-    margin: 0 auto; 
     display: block;
+    margin: 0 auto; 
 }
-
-
 
 
 /*
@@ -16362,7 +16360,7 @@ h3 + .isotope-filters {
   .isotope-filters-list-classic li a.active::after {
     border-color: transparent #004da2 transparent #004da2;
   }
-  .filter-btn {
+  .isotope-filters .isotope-filters-toggle {
     display: none;
   }
 }
