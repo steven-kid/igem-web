@@ -6390,6 +6390,14 @@ textarea.textarea-lg {
   margin-top: 35px;
 }
 
+.filter-btn{
+    margin: 0 auto; 
+    display: block;
+}
+
+
+
+
 /*
 *
 * Thumbnails
@@ -7621,7 +7629,7 @@ textarea.textarea-lg {
 
 .footer {
     background-color: #fff;
-    height: 300px;
+    height: 35vh;
     width: 100%;
     margin-bottom: 0px;
     padding-bottom: 0px;
@@ -16354,7 +16362,7 @@ h3 + .isotope-filters {
   .isotope-filters-list-classic li a.active::after {
     border-color: transparent #004da2 transparent #004da2;
   }
-  .isotope-filters .isotope-filters-toggle {
+  .filter-btn {
     display: none;
   }
 }
@@ -20711,6 +20719,10 @@ DEPENDENCES
 
     body{
         font-size: 10px;
+    }
+
+    #joinus{
+        display: none;
     }
 
     h2{
