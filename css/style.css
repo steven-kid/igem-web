@@ -124,7 +124,6 @@ h6,
   font-family: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     "Helvetica Neue", Arial, sans-serif;
   color: #151515;
-  text-transform: capitalize;
   letter-spacing: 0.024em;
   word-spacing: 0.05em;
 }
@@ -7695,7 +7694,7 @@ textarea.textarea-lg {
 #bnu-logo {
     position: absolute;
     bottom: 21%;
-    left: 82%;
+    left: 85%;
 }
 
 #wl-logo {
@@ -7704,16 +7703,16 @@ textarea.textarea-lg {
     left: 53%;
 }
 
-#huitong-logo {
+#school-logo {
     position: absolute;
-    bottom: 51%;
+    bottom: 65%;
     left: 53%;
 }
 
-#leyu-logo {
+#shichuang-logo {
     position: absolute;
-    bottom: 33%;
-    left: 53%;
+    bottom: 38%;
+    left: 50%;
 }
 
 #logo-bili {

@@ -7,7 +7,6 @@ export default defineConfig({
         index: path.resolve(__dirname, './index.html'),
         team: path.resolve(__dirname, './team.html'),
         project: path.resolve(__dirname, './projects.html'),
-        contactus:path.resolve(__dirname, './contactus.html'),
         news:path.resolve(__dirname, './news.html')
       }
     }
