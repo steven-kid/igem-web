@@ -7697,18 +7697,6 @@ textarea.textarea-lg {
     left: 85%;
 }
 
-#wl-logo {
-    position: absolute;
-    bottom: 68%;
-    left: 53%;
-}
-
-#school-logo {
-    position: absolute;
-    bottom: 65%;
-    left: 53%;
-}
-
 #shichuang-logo {
     position: absolute;
     bottom: 38%;
@@ -20649,7 +20637,6 @@ DEPENDENCES
     background-position: center center;
     background-size: cover;
     position: absolute;
-
     transition: 0.4s ease;
     z-index: 1;
   }
@@ -20665,7 +20652,6 @@ DEPENDENCES
     padding: 10px 15px;
     font-size: 20px;
     border: 5px solid #004da2;
-
     top: 50%;
     z-index:10;
     transform: translateY(-50%);
@@ -20718,3 +20704,88 @@ DEPENDENCES
     margin: 20px 10%;
     transition: 0.5s ease-in;
   }
+
+
+  /* 手机端适配 */
+  @media screen and (max-width: 450px) {
+
+    body{
+        font-size: 10px;
+    }
+
+    h2{
+        font-size: 20px;
+    }
+
+    .side-space {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    /* 照片墙 */
+    .left-arrow {
+        left: 5px;
+    }
+
+    .right-arrow {
+        right: 5px;
+    }
+
+    /* 时间轴 */
+
+    .timeline-content {
+        width: 90%;
+        padding-left: 15px;
+        text-align: center;
+    }
+
+    .timeline-content-title{
+        font-size: 25px;
+    }
+
+    /* project */
+    .project-content > h3{
+        font-size: 15px;
+    }
+
+    .project-content > p{
+        font-size: 10px;
+    }
+
+    /* footer */
+    #team-logo {
+        position: absolute;
+        bottom: 10%;
+        left: 3%;
+        transform: scale(0.8);
+    }
+    
+    #bnu-logo {
+        display: none;
+    }
+    
+    #shichuang-logo {
+        position: absolute;
+        bottom: 10%;
+        left: 16%;
+        transform: scale(0.8);
+    }
+
+    #logo-bili {
+        display: none;
+    }
+    
+    #logo-wechat {
+        display: none;
+    }
+    
+    #footer-contact {
+        position: absolute;
+        bottom: 15%;
+        left: 45%;
+        transform: scale(0.9);
+    }
+    .footer{
+        height: 9vh;
+    }
+}
