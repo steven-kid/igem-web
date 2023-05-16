@@ -3779,7 +3779,7 @@ hr {
 }
 
 .button.button-icon {
-  /* display: inline-flex; */
+  display: flex;
   justify-content: center;
   align-items: center;
   vertical-align: middle;
@@ -6391,7 +6391,6 @@ textarea.textarea-lg {
 }
 
 .filter-btn{
-    display: block;
     margin: 0 auto; 
 }
 
@@ -20713,7 +20712,7 @@ DEPENDENCES
 
 
   /* 手机端适配 */
-  @media screen and (max-width: 450px) {
+  @media screen and (max-width: 550px) {
 
     body{
         font-size: 10px;
